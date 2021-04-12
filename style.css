@@ -41,7 +41,41 @@ p, label {
     background: #fff;
     box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.1);
 }
-
+/*dropdown*/
+/*POur le cacher*/
+.navbar .dropdown ul {
+    display: block;
+    position: absolute;
+    margin: 0;
+    padding: 20px;
+    z-index: 99;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+    background-color: rgb(247, 232, 234);
+}
+/*style*/
+.navbar .dropdown ul li {
+    min-width: 150px;
+    list-style-type: none;
+}
+.navbar .dropdown ul li ::before{  /*POur changer la couleur de la puce (/2022 = code la puce pleine)*/
+    content:'\2022';
+    margin-right: 10px;
+    color: rgb(111, 19, 153);
+}
+.navbar .dropdown ul li a{
+    color: rgb(111, 19, 153);
+}
+.navbar .dropdown ul a:hover, .navbar .dropdown ul .active:hover, .navbar .dropdown ul li:hover > a {
+    color: rgb(113, 90, 124);
+    text-decoration: none;  
+}
+  .navbar .dropdown:hover > ul {
+    opacity: 1;
+    top: 100%;
+    visibility: visible;
+}
 /* Change navbar styling on small viewports */
 @media (max-width: 991.98px) {
     .navbar {
@@ -138,3 +172,11 @@ button a {
     opacity: 1;
     visibility: visible;
     }
+/*==================FOOTER==================*/
+/*Logos reseaux*/
+.bi {
+    color: rgb(44, 10, 58);
+}
+.bi :hover {
+    color: rgb(113, 90, 124);
+}
